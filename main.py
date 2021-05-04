@@ -3,6 +3,7 @@ import json
 import datetime
 import requests
 import nicehash
+import os
 
 API_KEY = ""
 API_SECRET = ""
@@ -15,13 +16,16 @@ MINING_WATTAGE =
 ELECTRICITY_PRICE_UNIT = ""
 ELECTRICITY_PRICE_PER_KWh = 
 
+__location__ = os.path.realpath(
+    os.path.join(os.getcwd(), os.path.dirname(__file__)))
+
 def getDB():
-    with open("data.json", "r") as f:
+    with open(os.path.join(__location__, "data.json"), "r") as f:
         return json.load(f)
 
 
 def overwriteDB(data):
-    with open("data.json", "w") as f:
+    with open(os.path.join(__location__, "data.json"), "w") as f:
         json.dump(data, f)
         print("New Entry added")
 
