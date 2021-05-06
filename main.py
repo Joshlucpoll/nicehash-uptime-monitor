@@ -99,7 +99,8 @@ def updateUptimeData():
             }
 
             if data:
-                overwriteDB(db.insert(0, data))
+                db.insert(0, data)
+                overwriteDB(db)
 
         else:
             print("Already got data - wait 5 minutes")
