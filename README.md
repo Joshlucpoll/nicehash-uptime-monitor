@@ -6,7 +6,7 @@ This program records and notifies how long a specific rig has been mining for us
 ***Sidenote*** *-- This program only works with a single algorthim (e.g. DaggerHashimoto), so the [Nicehash QuickMiner](https://www.nicehash.com/quick-miner) is best used in this case*
 
 ## How does it work?
-It uses Nicehash's API and Discord webhooks to look up when a rig has been mining and display that information. It uses a schedular to run at set time intervals and record information in a JSON file about the status of a rig. Every time the the program runs will add to this data file and send a notification to the specified Discord webhook. As well as this the monitor sends a monthly message with electricity usage and cost.
+It uses Nicehash's API and Discord webhooks to look up when a rig has been mining and display that information. It uses a schedular to run at set time intervals and record information in a JSON file about the status of a rig. Every time the program runs it will add to this data file and send a notification to the specified Discord webhook. As well as this the monitor sends a monthly message with electricity usage and cost.
 
 ## Prerequisites
 You will need [Python](https://www.python.org/downloads/) and the [requests package](https://pypi.org/project/requests/) for this program to work. 
